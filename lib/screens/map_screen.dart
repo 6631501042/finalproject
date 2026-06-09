@@ -24,7 +24,7 @@ class MapScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 color: const Color(0xFF22312F),
                 fontSize: 25,
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ],
@@ -33,7 +33,7 @@ class MapScreen extends StatelessWidget {
         actions: [
           // ---------- Profile (user) ----------
           Padding(
-            padding: const EdgeInsets.only(right: 12),
+            padding: const EdgeInsets.only(right: 5),
             child: IconButton.filledTonal(
               tooltip: 'Profile',
               onPressed: () {
@@ -101,7 +101,7 @@ class _MetricGrid extends StatelessWidget {
             ),
             _MetricTile(
               width: tileWidth,
-              icon: Icons.motorcycle_outlined,
+              icon: Icons.directions_car_outlined,
               label: 'Vehicle Model',
               value: profile.model,
             ),
@@ -168,7 +168,7 @@ class _MetricTile extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                   color: const Color(0xFF22312F),
-                  fontWeight: FontWeight.w900,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],

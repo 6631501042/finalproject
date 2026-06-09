@@ -221,7 +221,7 @@ class _BrandHeader extends StatelessWidget {
           child: const SizedBox(
             width: 46,
             height: 46,
-            child: Icon(Icons.two_wheeler, color: Colors.white),
+            child: Icon(Icons.directions_car, color: Colors.white, size: 32),
           ),
         ),
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'data/demo_data.dart';
+
 import 'screens/login_screen.dart';
 import 'screens/app_bar.dart';
 import 'theme/app_theme.dart';
@@ -21,7 +22,6 @@ class _VehicleTrackingAppState extends State<VehicleTrackingApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MFU Vehicle Tracker',
       theme: AppTheme.light,
       home: _isSignedIn
           ? AppBarScreen(

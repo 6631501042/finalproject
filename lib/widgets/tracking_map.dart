@@ -114,6 +114,7 @@ class _MapStatusBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return DecoratedBox(
       decoration: BoxDecoration(
+        // ------------------- background color -------------------
         color: const Color(0xFF263533).withValues(alpha: 0.92),
         borderRadius: BorderRadius.circular(8),
       ),
@@ -121,7 +122,7 @@ class _MapStatusBar extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: Row(
           children: [
-            const Icon(Icons.two_wheeler, color: Colors.white, size: 20),
+            // const Icon(Icons.directions_car, color: Colors.white, size: 22),
             const SizedBox(width: 10),
             Expanded(
               child: Column(

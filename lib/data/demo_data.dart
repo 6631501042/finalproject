@@ -4,7 +4,7 @@ class DemoTrackingData {
   const DemoTrackingData._();
 
   static const vehicle = UserProfile(
-    ownerName: 'MFUStudent',
+    ownerName: 'MFU_Student',
     email: '6631500000@lamduan.mfu.ac.th',
     model: 'Honda Wave 125i',
     licensePlate: 'AB 1234 Chiang Rai',

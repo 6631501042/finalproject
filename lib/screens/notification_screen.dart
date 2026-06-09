@@ -14,7 +14,7 @@ class NotificationScreen extends StatelessWidget {
           'Notifications',
           style: TextStyle(
             fontSize: 25,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.w600,
             color: Color(0xFF1F2937),
           ),
         ),

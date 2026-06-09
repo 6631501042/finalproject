@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:finalproject/screens/login_screen.dart'; // Login
+// import 'package:finalproject/screens/login_screen.dart'; // LoginScreen
 import 'package:finalproject/vehicle_tracking_app.dart'; // VehicleTrackingApp
 
 void main() {

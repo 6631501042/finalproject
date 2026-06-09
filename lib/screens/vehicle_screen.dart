@@ -100,7 +100,10 @@ class _VehicleScreenState extends State<VehicleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vehicle Profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
+        title: const Text(
+          'Vehicle Profile',
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.add_circle_outline),
@@ -132,10 +135,37 @@ class _VehicleScreenState extends State<VehicleScreen> {
                         : const Icon(Icons.motorcycle),
                     title: Text(vehicle.model),
                     subtitle: Text(vehicle.licensePlate),
+
                     trailing: IconButton(
                       icon: const Icon(Icons.delete_outline),
-                      onPressed: () => _deleteVehicle(index),
+                      // onPressed: () => _deleteVehicle(index),
+                      onPressed: () async {
+                        final confirm = await showDialog<bool>(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: const Text('Delete Vehicle'),
+                            content: const Text(
+                              'Are you sure you want to delete this vehicle?',
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context, false),
+                                child: const Text('Cancel'),
+                              ),
+                              FilledButton(
+                                onPressed: () => Navigator.pop(context, true),
+                                child: const Text('Delete'),
+                              ),
+                            ],
+                          ),
+                        );
+
+                        if (confirm == true) {
+                          await _deleteVehicle(index);
+                        }
+                      },
                     ),
+
                     onTap: () {
                       _openVehicleForm(vehicle: vehicle);
                     },
@@ -250,7 +280,10 @@ class _VehicleFormScreenState extends State<VehicleFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.vehicle == null ? 'Add Vehicle' : 'Edit Vehicle', style: const TextStyle(fontWeight: FontWeight.w600)),
+        title: Text(
+          widget.vehicle == null ? 'Add Vehicle' : 'Edit Vehicle',
+          style: const TextStyle(fontWeight: FontWeight.w600),
+        ),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16),
@@ -268,7 +301,9 @@ class _VehicleFormScreenState extends State<VehicleFormScreen> {
             controller: modelController,
             decoration: const InputDecoration(
               labelText: 'Vehicle model',
-              prefixIcon: Icon(Icons.motorcycle_outlined), // motorcycle_outlined
+              prefixIcon: Icon(
+                Icons.directions_car_outlined,
+              ), // motorcycle_outlined
             ),
           ),
 

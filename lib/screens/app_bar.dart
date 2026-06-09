@@ -69,8 +69,8 @@ class AppBarScreen extends StatelessWidget {
               label: 'History',
             ),
             NavigationDestination(
-              icon: Icon(Icons.two_wheeler_outlined),
-              selectedIcon: Icon(Icons.two_wheeler),
+              icon: Icon(Icons.directions_car_outlined),
+              selectedIcon: Icon(Icons.directions_car),
               label: 'Vehicle',
             ),
             NavigationDestination(
